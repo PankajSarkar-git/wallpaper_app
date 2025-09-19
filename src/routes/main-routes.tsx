@@ -1,19 +1,22 @@
-
 import { createStackNavigator } from '@react-navigation/stack';
-import HomePage from '../screens/home';
-import AboutPage from '../screens/about';
-import Profile from '../screens/profile';
-
-
+import CustomBottomTabs from './CustomBottomTabs';
+import ChatScreen from '../screens/chat';
+import SettingsScreen from '../screens/settings';
+import DetailsScreen from '../screens/details';
+import NotificationsScreen from '../screens/notifications';
+import HelpScreen from '../screens/help';
 
 const Stack = createStackNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown:false}}>
-      <Stack.Screen name="Home"  component={HomePage} />
-      <Stack.Screen name="About" component={AboutPage} />
-      <Stack.Screen name="Profile" component={Profile} />
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Tabs" component={CustomBottomTabs} />
+      <Stack.Screen name="Chat" component={ChatScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen name="Notifications" component={NotificationsScreen} />
+      <Stack.Screen name="Help" component={HelpScreen} />
     </Stack.Navigator>
   );
 }

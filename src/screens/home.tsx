@@ -8,10 +8,8 @@ const HomePage = () => {
   return (
     <View>
       <Text>HomePage one<FontAwesome name="rocket" size={30} color="#900" />;</Text>
-      <Button
-        title="Go to about Page"
-        onPress={() => navigation.navigate('About')}
-      />
+       <Button title="Go to Settings" onPress={() => navigation.navigate("Settings")} />
+      <Button title="Open Chat" onPress={() => navigation.navigate("Chat")} />
       
     </View>
   );
